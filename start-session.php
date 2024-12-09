@@ -15,5 +15,6 @@ if ($_SERVER["SERVER_NAME"] === "localhost") {
 }
 else if (!array_key_exists("user", $_SESSION)) {
     header("Location: https://data.nathcat.net/sso/?return-page=https://blog.nathcat.net" . $_SERVER["REQUEST_URI"]);
+    exit();
 }
 ?>

@@ -8,13 +8,14 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="/static/scripts/cloud.js"></script>
     </head>
 
     <body>
         <div class="content">
             <?php include("header.php"); ?>
 
-            
+            <div id="dir-contents" class="column"></div>
            
             <?php include("footer.php"); ?>
         </div>
