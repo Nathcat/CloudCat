@@ -15,7 +15,7 @@
     <div class="content">
         <?php include("../header.php"); ?>
 
-        <div class="main">
+        <div class="main align-center">
             <h1>CloudCat Privacy Policy</h1>
 
             <div class="content-card">
