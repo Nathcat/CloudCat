@@ -37,8 +37,15 @@
 
         <div class="main">
             <div class="row align-center">
-                <input id="file-upload" type="file" />
-                <button onclick="cloud_upload_file(document.getElementById('file-upload').files[0], path)">Upload file</button>
+                <div class="column align-center justify-center">
+                    <input style="width: 75%;" id="file-upload" type="file" />
+                    <input style="width: 75%;" id="new-folder-name" type="text" placeholder="New folder name?" />
+                </div>
+        
+                <div class="column align-center justify-center">
+                    <button style="width: 75%;" onclick="cloud_upload_file(document.getElementById('file-upload').files[0], path)">Upload file</button>
+                    <button style="width: 75%;" onclick="cloud_upload_file(document.getElementById('file-upload').files[0], path + '/' + $('#new-folder-name').val())">Upload file to new folder</button>
+                </div>
             </div>
 
             <div ondrop="fileDropHandler(event);" id="dir-contents" class="column">
