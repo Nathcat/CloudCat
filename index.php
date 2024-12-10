@@ -70,7 +70,7 @@
                 container.innerHTML += "<div style='margin-left: 25px' class='horizontal-divider'></div>";
 
                 for (const file in files) {
-                    container.innerHTML += "<div onclick=\"location='https://cdn.nathcat.net/cloud/" + files[file].filePath + "'\" class='file'><img src='/static/images/iconmonstr-file-thin.svg'><h3>" + files[file].name + "</h3><span class='spacer'></span><button onclick='cloud_delete_file('" + files[file].filePath + "')'>Delete</button></div>";
+                    container.innerHTML += "<div class='row align-center'><div onclick=\"location='https://cdn.nathcat.net/cloud/" + files[file].filePath + "'\" class='file'><img src='/static/images/iconmonstr-file-thin.svg'><h3>" + files[file].name + "</h3></div><span class='spacer'></span><button onclick=\"cloud_delete_file('" + files[file].filePath + "');\">Delete</button></div>";
                 }
             });
         </script>
