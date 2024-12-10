@@ -20,6 +20,6 @@ function cloud_get_dir_contents(dir, callback) {
             else { alert("Specified path cannot be found!"); return; }
         }
 
-        callback(currentDir["."]);
+        callback(currentDir);
     }, (m) => alert(m));
 }

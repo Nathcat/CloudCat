@@ -1,0 +1,29 @@
+.folder {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    font-size: 2em;
+}
+
+.folder img {
+    width: 2em;
+    height: 2em;
+    margin-right: 25px;
+    margin-left: 25px;
+}
+
+.file {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    font-size: 1.5em;
+}
+
+.file img {
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: 25px;
+    margin-left: 25px;
+}
