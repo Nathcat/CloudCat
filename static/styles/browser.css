@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: start;
     font-size: 2em;
+    cursor: pointer;
 }
 
 .folder img {
@@ -19,6 +20,7 @@
     align-items: center;
     justify-content: start;
     font-size: 1.5em;
+    cursor: pointer;
 }
 
 .file img {
