@@ -23,3 +23,18 @@ function cloud_get_dir_contents(dir, callback) {
         callback(currentDir);
     }, (m) => alert(m));
 }
+
+function cloud_upload_file(file, path) {
+    let fd = new FormData();
+    fd.append("file", file);
+    fd.append("displayPath", path);
+
+    fetch("https://cdn.nathcat.net/cloud/upload.php", {
+        method: "POST",
+        credentials: "include",
+        body: fd
+    }).then((r) => r.json()).then((r) => {
+        if (r.status === "fail") alert (r.message);
+        else location.reload();
+    });
+}

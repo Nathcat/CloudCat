@@ -33,11 +33,19 @@
                 parentPath = parentPath.slice(0, parentPath.length - 1);
                 parentPath = parentPath.join("/");
             }
-
         </script>
 
-        <div id="dir-contents" class="column">
-            <div class="folder" onclick="location = '/?path=' + parentPath;"><img src="/static/images/iconmonstr-folder-open-thin.svg"><h3><i>Up a level</i></h3></div>
+        <div class="main">
+            <div class="row align-center">
+                <input id="file-upload" type="file" />
+                <button onclick="cloud_upload_file(document.getElementById('file-upload').files[0], path)">Upload file</button>
+            </div>
+
+            <div ondrop="fileDropHandler(event);" id="dir-contents" class="column">
+                <div class="folder" onclick="location = '/?path=' + parentPath;"><img src="/static/images/iconmonstr-folder-open-thin.svg">
+                    <h3><i>Up a level</i></h3>
+                </div>
+            </div>
         </div>
 
         <script>
