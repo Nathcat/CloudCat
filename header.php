@@ -5,6 +5,7 @@
         <div class="column align-center justify-center">
             <h1 id="navbar-title">CloudCat</h1>
             <a href="https://apps.nathcat.net">Part of the Nathcat Network</a>
+            <a href="/privacy-policy">CloudCat Privacy Policy</a>
         </div>
 
         <?php if (!isset($__REMOVE_PROFILE_BANNER__)) : ?>
