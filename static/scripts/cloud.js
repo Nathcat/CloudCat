@@ -39,7 +39,9 @@ function cloud_upload_file(file, path) {
     });
 }
 
-function cloud_delete_file(file) {
+function cloud_delete_file(file, name) {
+    if (!confirm("Are you sure you want to delete \"" + name + "\"?")) return;
+
     let fd = new FormData();
     fd.append("filePath", file);
 
