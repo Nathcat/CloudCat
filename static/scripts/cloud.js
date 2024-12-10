@@ -38,3 +38,17 @@ function cloud_upload_file(file, path) {
         else location.reload();
     });
 }
+
+function cloud_delete_file(file) {
+    let fd = new FormData();
+    fd.append("filePath", file);
+
+    fetch("https://cdn.nathcat.net/cloud/delete.php", {
+        method: "POST",
+        credentials: "include",
+        body: fd
+    }).then((r) => r.json()).then((r) => {
+        if (r.status === "success") location.reload();
+        else alert(r.message);
+    });
+}
