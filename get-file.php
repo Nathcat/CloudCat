@@ -27,7 +27,7 @@ if ($r = $set->fetch_assoc()) {
     if ($r["owner"] == $_SESSION["user"]["id"]) {
         $out = [
             "status" => "success",
-            "file" => json_encode($r)
+            "file" => $r
         ];
 
         die(json_encode($out));
