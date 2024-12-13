@@ -1,5 +1,7 @@
+const CLOUD_URL = "https://cloud.nathcat.net";
+
 function cloud_get_file_tree(on_success, on_error) {
-    fetch("/get-file-tree.php", {
+    fetch(CLOUD_URL + "/get-file-tree.php", {
         method: "GET",
         credentials: "include"
     }).then((r) => r.json()).then((r) => {
