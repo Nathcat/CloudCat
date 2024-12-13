@@ -10,7 +10,7 @@ function cloud_get_file_tree(on_success, on_error) {
     });
 }
 
-function cloud_get_dir_contents(dir, callback) {
+function cloud_get_dir_contents(dir, callback, not_found_callback) {
     let path = dir.split("/");
 
     cloud_get_file_tree((tree) => {
@@ -19,7 +19,7 @@ function cloud_get_dir_contents(dir, callback) {
         for (let i = 1; i < path.length; i++) {
             if (path[i] === "") break;
             if (currentDir[path[i]] !== undefined) currentDir = currentDir[path[i]];
-            else { alert("Specified path cannot be found!"); return; }
+            else { not_found_callback(); return; }
         }
 
         callback(currentDir);

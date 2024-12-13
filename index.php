@@ -72,7 +72,7 @@
                 for (const file in files) {
                     container.innerHTML += "<div class='row align-center'><div onclick=\"location='https://cdn.nathcat.net/cloud/" + files[file].filePath + "'\" class='file'><img src='/static/images/iconmonstr-file-thin.svg'><h3>" + files[file].name + "</h3></div><span class='spacer'></span><button onclick=\"cloud_delete_file('" + files[file].filePath + "', '" + files[file].name + "');\">Delete</button></div>";
                 }
-            });
+            }, () => { alert("Specified path cannot be found!"); });
         </script>
 
         <?php include("footer.php"); ?>
