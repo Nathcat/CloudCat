@@ -30,16 +30,15 @@ if ($r = $set->fetch_assoc()) {
             "file" => json_encode($r)
         ];
 
-        echo json_encode($out);
+        die(json_encode($out));
     }
 }
-else {
-    $out = [
-        "status" => "fail",
-        "message" => "Cannot complete request."
-    ];
 
-    die(json_encode($out));
-}
+$out = [
+    "status" => "fail",
+    "message" => "Cannot complete request."
+];
+
+die(json_encode($out));
 
 ?>
