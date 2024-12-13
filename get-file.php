@@ -12,7 +12,7 @@ if (!array_key_exists("user", $_SESSION)) {
     die("{\"status\": \"fail\", \"message\": \"Not logged in.\"}");
 }
 
-$_POST = json_decode(file_get_contents("php://input"));
+$_POST = json_decode(file_get_contents("php://input"), true);
 
 if (!array_key_exists("filePath", $_POST)) {
     die("{\"status\": \"fail\", \"message\": \"Invalid request\"}");
