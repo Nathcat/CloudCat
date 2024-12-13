@@ -63,7 +63,7 @@
                 for (const key in dir) {
                     if (key === ".") continue;
                     else {
-                        container.innerHTML += "<div onclick=\"location='/?path=" + path + "/" + key + "';\" class='folder'><img src='/static/images/iconmonstr-folder-open-thin.svg'><h3>" + key + "</h3></div>";
+                        container.innerHTML += "<div onclick=\"location='/?path=" + (path === "/" ? "" : path) + "/" + key + "';\" class='folder'><img src='/static/images/iconmonstr-folder-open-thin.svg'><h3>" + key + "</h3></div>";
                     }
                 }
 
