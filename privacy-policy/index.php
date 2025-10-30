@@ -31,6 +31,12 @@
                     database, which keeps a record of the files which a user owns,
                     and which files these correspond to on the server file system.
                 </p>
+
+                <h2>User provided content</h2>
+                <p>
+                    CloudCat only shares user provided content with the user that provided it. The Nathcat Network accepts
+                    no responsibility for the content users share on the platform.
+                </p>
             </div>
         </div>
 
