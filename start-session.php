@@ -17,4 +17,8 @@ else if (!array_key_exists("user", $_SESSION)) {
     header("Location: https://data.nathcat.net/sso/?return-page=https://cloud.nathcat.net" . $_SERVER["REQUEST_URI"]);
     exit();
 }
+
+if ($_SESSION["user"]["verified"] != 1) {
+  header("Location: /not-permitted.php");
+}
 ?>
