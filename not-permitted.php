@@ -16,7 +16,7 @@
 <body>
     <div class="content">
 
-        <div class="main">
+        <div class="main align-center justify-center">
           <h1>Not permitted!</h1>
           <p>You must be verified to access this service!</p>
         </div>

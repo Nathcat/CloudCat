@@ -19,7 +19,7 @@ else if (!array_key_exists("user", $_SESSION)) {
 }
 
 if ($_SESSION["user"]["verified"] != 1) {
-  header("Location: https://cloud.nathcat.net/not-permitted.php");
+  header("Location: /not-permitted.php");
   exit();
 }
 ?>
