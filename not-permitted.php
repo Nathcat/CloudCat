@@ -15,7 +15,6 @@
 
 <body>
     <div class="content">
-        <?php include("header.php"); ?>
 
         <div class="main">
           <h1>Not permitted!</h1>
