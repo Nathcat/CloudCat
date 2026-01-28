@@ -20,5 +20,6 @@ else if (!array_key_exists("user", $_SESSION)) {
 
 if ($_SESSION["user"]["verified"] != 1) {
   header("Location: /not-permitted.php");
+  exit();
 }
 ?>
